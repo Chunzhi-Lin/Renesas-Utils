@@ -11,7 +11,7 @@ OBJDUMP = $(CROSS_COMPILE)objdump
 
 OUTDIR = build
 SRCDIR = src
-INCDIR = src
+INCDIR = inc
 
 C_SRC = $(foreach dir, $(SRCDIR), $(wildcard $(dir)/*.c))
 S_SRC = $(foreach dir, $(SRCDIR), $(wildcard $(dir)/*.s))

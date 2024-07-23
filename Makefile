@@ -1,9 +1,8 @@
 TARGET = isl-util
 
-CROSS_COMPILE = riscv64-unknown-linux-gnu-
-# CC = $(CROSS_COMPILE)aarch64-linux-gnu-gcc
-# AS = $(CROSS_COMPILE)aarch64-linux-gnu-gcc
-# LD = $(CROSS_COMPILE)aarch64-linux-gnu-gcc
+# CROSS_COMPILE = aarch64-linux-gnu-
+# CROSS_COMPILE = riscv64-unknown-linux-gnu-
+
 CC = $(CROSS_COMPILE)gcc
 AS = $(CROSS_COMPILE)gcc
 LD = $(CROSS_COMPILE)gcc
@@ -33,8 +32,7 @@ ASFLAGS = $(OPT_CFLAGS) -x assembler-with-cpp \
           -Wa,--no-warn
 
 LDFLAGS = $(OPT_CFLAGS) -static \
-	  -Wl,-Map,$(OUTDIR)/$(TARGET).map -Wl,--gc-sections \
-	  $(foreach dir, $(INCDIR), -I$(dir))
+	  -Wl,-Map,$(OUTDIR)/$(TARGET).map -Wl,--gc-sections
 
 ifeq ($(strip $(V)), 1)
 	Q =

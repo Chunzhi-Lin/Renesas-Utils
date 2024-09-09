@@ -15,7 +15,7 @@ sudo ./isl-uitl i2cbus slave-addr device [file-name]
       
             0: SG2042 CPU0 I2C0
             
-            1: SG2042 CPU1 I2C1
+            4: SG2042 CPU1 I2C0
     
     slave-addr:
      
